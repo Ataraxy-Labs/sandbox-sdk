@@ -1,0 +1,32 @@
+{
+  "name": "@gitarsenal/ralph-runner-server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch index.ts",
+    "start": "bun run index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "2.0.89",
+    "@ai-sdk/anthropic": "1.1.6",
+    "@opencode-ai/sandbox-sdk": "workspace:*",
+    "@opencode-ai/sandbox-modal": "workspace:*",
+    "@opencode-ai/sandbox-daytona": "workspace:*",
+    "@opencode-ai/sandbox-e2b": "workspace:*",
+    "@opencode-ai/sandbox-blaxel": "workspace:*",
+    "@opencode-ai/sandbox-cloudflare": "workspace:*",
+    "@opencode-ai/sandbox-vercel": "workspace:*",
+    "@opencode-ai/sandbox-docker": "workspace:*",
+    "ai": "5.0.119",
+    "convex": "latest",
+    "effect": "3.19.13",
+    "hono": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  }
+}

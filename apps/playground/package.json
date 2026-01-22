@@ -1,0 +1,25 @@
+{
+  "name": "@sandbox-sdk/playground",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bunx vite",
+    "build": "bunx vite build",
+    "preview": "bunx vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@solidjs/router": "0.15.4",
+    "solid-js": "1.9.10",
+    "tailwindcss": "4.1.11",
+    "monaco-editor": "^0.52.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.11",
+    "@types/node": "22.13.9",
+    "typescript": "5.8.2",
+    "vite": "7.1.4",
+    "vite-plugin-solid": "2.11.10"
+  }
+}

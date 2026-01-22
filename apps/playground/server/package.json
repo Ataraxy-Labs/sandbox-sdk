@@ -1,0 +1,27 @@
+{
+  "name": "@gitarsenal/sandbox-playground-server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch index.ts",
+    "start": "bun run index.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "2.0.89",
+    "@opencode-ai/sandbox-sdk": "workspace:*",
+    "@opencode-ai/sandbox-modal": "workspace:*",
+    "@opencode-ai/sandbox-daytona": "workspace:*",
+    "@opencode-ai/sandbox-e2b": "workspace:*",
+    "@opencode-ai/sandbox-blaxel": "workspace:*",
+    "@opencode-ai/sandbox-cloudflare": "workspace:*",
+    "@opencode-ai/sandbox-vercel": "workspace:*",
+    "ai": "5.0.119",
+    "effect": "3.19.13",
+    "hono": "catalog:"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  }
+}

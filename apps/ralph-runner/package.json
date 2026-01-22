@@ -1,0 +1,32 @@
+{
+  "name": "@sandbox-sdk/ralph-runner",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bunx vite",
+    "build": "bunx vite build",
+    "preview": "bunx vite preview",
+    "typecheck": "echo 'Skipping typecheck - requires convex functions from main repo'"
+  },
+  "dependencies": {
+    "@opencode-ai/sdk": "1.1.25",
+    "@solidjs/router": "0.15.4",
+    "@tanstack/query-core": "^5.28.0",
+    "@tanstack/solid-query": "^5.28.0",
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
+    "convex": "latest",
+    "monaco-editor": "^0.52.0",
+    "opencode-ai": "1.1.25",
+    "solid-js": "1.9.10",
+    "tailwindcss": "4.1.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.11",
+    "@types/node": "22.13.9",
+    "typescript": "5.8.2",
+    "vite": "7.1.4",
+    "vite-plugin-solid": "2.11.10"
+  }
+}
