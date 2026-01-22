@@ -1,5 +1,5 @@
 {
-  "name": "@sandbox-sdk/core",
+  "name": "@ataraxy-labs/sandbox-sdk",
   "version": "0.1.0",
   "description": "Multi-provider sandbox SDK with Effect-TS best practices for running isolated code execution environments",
   "private": true,
@@ -11,7 +11,8 @@
     "./testing": "./src/testing/index.ts"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
   },
   "keywords": [
     "sandbox",

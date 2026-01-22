@@ -109,7 +109,7 @@ bun dev
 
 - **Frontend**: SolidJS, Vite, TailwindCSS, Monaco Editor
 - **Backend**: Hono, Bun
-- **SDK**: @opencode-ai/sandbox-sdk, Effect-TS
+- **SDK**: @ataraxy-labs/sandbox-sdk, Effect-TS
 - **Provider**: Modal (cloud sandboxes)
 
 ## Development

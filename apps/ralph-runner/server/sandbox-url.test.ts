@@ -1,8 +1,8 @@
 import { describe, expect, test, beforeAll, afterAll } from "bun:test"
 import { Effect, Layer } from "effect"
-import { ModalDriverLive, ModalConfigLive } from "@opencode-ai/sandbox-modal"
-import { DaytonaDriverLive, DaytonaConfigLive } from "@opencode-ai/sandbox-daytona"
-import { SandboxDriver } from "@opencode-ai/sandbox-sdk"
+import { ModalDriverLive, ModalConfigLive } from "@ataraxy-labs/sandbox-modal"
+import { DaytonaDriverLive, DaytonaConfigLive } from "@ataraxy-labs/sandbox-daytona"
+import { SandboxDriver } from "@ataraxy-labs/sandbox-sdk"
 
 // Load .env.local if it exists (check both current dir and root)
 const loadEnv = async () => {

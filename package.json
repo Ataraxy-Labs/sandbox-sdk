@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "sandbox-sdk",
+  "name": "@ataraxy-labs/sandbox-sdk-monorepo",
   "description": "Multi-provider sandbox SDK with Effect-TS best practices",
   "private": true,
   "type": "module",
@@ -13,7 +13,9 @@
   },
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/*",
+    "apps/ralph-runner/server",
+    "apps/playground/server"
   ],
   "devDependencies": {
     "typescript": "5.8.2",

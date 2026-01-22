@@ -1,4 +1,4 @@
-# @opencode-ai/sandbox-sdk
+# @ataraxy-labs/sandbox-sdk
 
 A multi-provider sandbox SDK with a Vercel-like DX for running isolated code execution environments.
 
@@ -13,14 +13,14 @@ A multi-provider sandbox SDK with a Vercel-like DX for running isolated code exe
 ## Installation
 
 ```bash
-pnpm add @opencode-ai/sandbox-sdk
+pnpm add @ataraxy-labs/sandbox-sdk
 ```
 
 ## Quick Start
 
 ```typescript
-import { Sandbox } from "@opencode-ai/sandbox-sdk";
-import { ModalDriverLive } from "@opencode-ai/sandbox-modal"; // or your preferred provider
+import { Sandbox } from "@ataraxy-labs/sandbox-sdk";
+import { ModalDriverLive } from "@ataraxy-labs/sandbox-modal"; // or your preferred provider
 
 // Create a sandbox with automatic cleanup
 await using sandbox = await Sandbox.create({
@@ -205,7 +205,7 @@ async function runTask() {
 For advanced use cases, you can use the Effect-based API:
 
 ```typescript
-import { EffectSandbox, SandboxLive, SandboxDriver } from "@opencode-ai/sandbox-sdk";
+import { EffectSandbox, SandboxLive, SandboxDriver } from "@ataraxy-labs/sandbox-sdk";
 import { Effect, Layer } from "effect";
 
 // Using the Effect service
@@ -229,12 +229,12 @@ The SDK supports multiple sandbox providers:
 
 | Provider | Package | Features |
 |----------|---------|----------|
-| Modal | `@opencode-ai/sandbox-modal` | GPU support, volumes, snapshots |
-| E2B | `@opencode-ai/sandbox-e2b` | Fast startup, file watching |
-| Vercel | `@opencode-ai/sandbox-vercel` | Git cloning, snapshots |
-| Daytona | `@opencode-ai/sandbox-daytona` | Self-hosted option |
-| Cloudflare | `@opencode-ai/sandbox-cloudflare` | Edge compute |
-| Blaxel | `@opencode-ai/sandbox-blaxel` | Multi-region |
+| Modal | `@ataraxy-labs/sandbox-modal` | GPU support, volumes, snapshots |
+| E2B | `@ataraxy-labs/sandbox-e2b` | Fast startup, file watching |
+| Vercel | `@ataraxy-labs/sandbox-vercel` | Git cloning, snapshots |
+| Daytona | `@ataraxy-labs/sandbox-daytona` | Self-hosted option |
+| Cloudflare | `@ataraxy-labs/sandbox-cloudflare` | Edge compute |
+| Blaxel | `@ataraxy-labs/sandbox-blaxel` | Multi-region |
 
 ## Error Handling
 
@@ -249,7 +249,7 @@ import {
   SandboxValidationError,
   SandboxProviderError,
   SandboxCapabilityError,
-} from "@opencode-ai/sandbox-sdk";
+} from "@ataraxy-labs/sandbox-sdk";
 
 try {
   await sandbox.snapshot();
@@ -272,7 +272,7 @@ import type {
   ProcessChunk,
   FsEntry,
   SnapshotInfo,
-} from "@opencode-ai/sandbox-sdk";
+} from "@ataraxy-labs/sandbox-sdk";
 ```
 
 ## License

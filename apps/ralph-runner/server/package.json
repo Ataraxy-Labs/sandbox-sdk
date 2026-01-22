@@ -1,32 +1,34 @@
 {
-  "name": "@gitarsenal/ralph-runner-server",
+  "name": "@ataraxy-labs/ralph-runner-server",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "bun run --watch index.ts",
     "start": "bun run index.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
   },
   "dependencies": {
     "@ai-sdk/openai": "2.0.89",
     "@ai-sdk/anthropic": "1.1.6",
-    "@opencode-ai/sandbox-sdk": "workspace:*",
-    "@opencode-ai/sandbox-modal": "workspace:*",
-    "@opencode-ai/sandbox-daytona": "workspace:*",
-    "@opencode-ai/sandbox-e2b": "workspace:*",
-    "@opencode-ai/sandbox-blaxel": "workspace:*",
-    "@opencode-ai/sandbox-cloudflare": "workspace:*",
-    "@opencode-ai/sandbox-vercel": "workspace:*",
-    "@opencode-ai/sandbox-docker": "workspace:*",
+    "@ataraxy-labs/sandbox-sdk": "workspace:*",
+    "@ataraxy-labs/sandbox-modal": "workspace:*",
+    "@ataraxy-labs/sandbox-daytona": "workspace:*",
+    "@ataraxy-labs/sandbox-e2b": "workspace:*",
+    "@ataraxy-labs/sandbox-blaxel": "workspace:*",
+    "@ataraxy-labs/sandbox-cloudflare": "workspace:*",
+    "@ataraxy-labs/sandbox-vercel": "workspace:*",
+    "@ataraxy-labs/sandbox-docker": "workspace:*",
     "ai": "5.0.119",
     "convex": "latest",
     "effect": "3.19.13",
-    "hono": "catalog:",
-    "zod": "catalog:"
+    "hono": "4.7.11",
+    "zod": "^3.24.0"
   },
   "devDependencies": {
-    "@types/bun": "catalog:",
-    "typescript": "catalog:"
+    "@types/bun": "1.3.5",
+    "typescript": "5.8.2",
+    "fast-check": "^3.22.0"
   }
 }

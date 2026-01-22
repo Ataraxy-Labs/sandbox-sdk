@@ -3,7 +3,7 @@ import { generateText, tool } from "ai"
 import { createOpenAI } from "@ai-sdk/openai"
 import { createAnthropic } from "@ai-sdk/anthropic"
 import { z } from "zod"
-import { SandboxDriver } from "@opencode-ai/sandbox-sdk"
+import { SandboxDriver } from "@ataraxy-labs/sandbox-sdk"
 
 // Types for agent events
 export type AgentEventType = "status" | "thought" | "tool_call" | "tool_result" | "output" | "error" | "complete"

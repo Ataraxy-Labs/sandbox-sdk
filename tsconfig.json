@@ -12,8 +12,6 @@
     "sourceMap": true,
     "noEmit": true,
     "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "noUncheckedIndexedAccess": true,
-    "noPropertyAccessFromIndexSignature": true
+    "verbatimModuleSyntax": true
   }
 }

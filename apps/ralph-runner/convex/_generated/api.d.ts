@@ -13,8 +13,17 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
+import type * as agentEvents from "../agentEvents";
+import type * as ralphs from "../ralphs";
+import type * as sandboxes from "../sandboxes";
+import type * as users from "../users";
 
-declare const fullApi: ApiFromModules<{}>;
+declare const fullApi: ApiFromModules<{
+  agentEvents: typeof agentEvents;
+  ralphs: typeof ralphs;
+  sandboxes: typeof sandboxes;
+  users: typeof users;
+}>;
 
 /**
  * A utility for referencing Convex functions in your app's public API.

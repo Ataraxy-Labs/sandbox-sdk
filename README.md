@@ -4,9 +4,21 @@ Multi-provider sandbox SDK with Effect-TS best practices for running isolated co
 
 ## Packages
 
-- **[@sandbox-sdk/core](./packages/sdk)** - Core SDK with Effect-TS patterns for sandbox management
-- **[@sandbox-sdk/playground](./apps/playground)** - Interactive sandbox playground UI
-- **[@sandbox-sdk/ralph-runner](./apps/ralph-runner)** - Ralph autonomous agent runner
+### Core
+- **[@ataraxy-labs/sandbox-sdk](./packages/sdk)** - Core SDK with Effect-TS patterns for sandbox management
+
+### Providers
+- **[@ataraxy-labs/sandbox-modal](./packages/modal)** - Modal provider
+- **[@ataraxy-labs/sandbox-daytona](./packages/daytona)** - Daytona provider
+- **[@ataraxy-labs/sandbox-e2b](./packages/e2b)** - E2B provider
+- **[@ataraxy-labs/sandbox-blaxel](./packages/blaxel)** - Blaxel provider
+- **[@ataraxy-labs/sandbox-cloudflare](./packages/cloudflare)** - Cloudflare provider
+- **[@ataraxy-labs/sandbox-vercel](./packages/vercel)** - Vercel provider
+- **[@ataraxy-labs/sandbox-docker](./packages/docker)** - Docker provider (local development)
+
+### Apps
+- **[@ataraxy-labs/sandbox-playground](./apps/playground)** - Interactive sandbox playground UI
+- **[@ataraxy-labs/ralph-runner](./apps/ralph-runner)** - Ralph autonomous agent runner
 
 ## Features
 
@@ -37,15 +49,24 @@ bun install
 # Run typecheck
 bun run typecheck
 
+# Run tests
+bun run test
+
 # Start playground
-bun run dev --filter=@sandbox-sdk/playground
+bun run dev --filter=@ataraxy-labs/sandbox-playground
 ```
 
 ## SDK Usage
 
 ```typescript
-import { Effect } from "effect"
-import { SandboxDriver, withOperationContext, validateCreateOptions } from "@sandbox-sdk/core"
+import { Effect, Layer } from "effect"
+import { SandboxDriver, withOperationContext, validateCreateOptions } from "@ataraxy-labs/sandbox-sdk"
+import { ModalDriverLive, ModalConfigLive } from "@ataraxy-labs/sandbox-modal"
+
+// Configure the provider
+const modalLayer = ModalDriverLive.pipe(
+  Layer.provide(ModalConfigLive({ appName: "my-app", timeoutMs: 300000 }))
+)
 
 const program = Effect.gen(function* () {
   // Validate inputs at boundary
@@ -55,7 +76,7 @@ const program = Effect.gen(function* () {
   
   // Operations automatically get spans and error context
   const sandbox = yield* withOperationContext(
-    { provider: "docker", capability: "lifecycle", operation: "create" },
+    { provider: "modal", capability: "lifecycle", operation: "create" },
     driver.create({ image: "node:22" })
   )
   
@@ -65,6 +86,9 @@ const program = Effect.gen(function* () {
   
   return result
 })
+
+// Run with provider layer
+Effect.runPromise(Effect.provide(program, modalLayer))
 ```
 
 ## Development
@@ -72,6 +96,9 @@ const program = Effect.gen(function* () {
 ```bash
 # Typecheck all packages
 bun run typecheck
+
+# Run SDK tests
+bun test --cwd packages/sdk
 
 # Build all packages
 bun run build

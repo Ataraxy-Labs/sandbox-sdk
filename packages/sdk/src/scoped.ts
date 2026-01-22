@@ -6,7 +6,7 @@
  *
  * @example
  * ```ts
- * import { acquireSandbox, withManagedSandbox } from "@opencode-ai/sandbox-sdk"
+ * import { acquireSandbox, withManagedSandbox } from "@ataraxy-labs/sandbox-sdk"
  *
  * // Using scoped API with automatic cleanup
  * const program = Effect.scoped(

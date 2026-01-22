@@ -13,7 +13,7 @@
  *   TestServicesLayer,
  *   TestHarness,
  *   withSandbox
- * } from "@opencode-ai/sandbox-sdk/testing"
+ * } from "@ataraxy-labs/sandbox-sdk/testing"
  * ```
  */
 

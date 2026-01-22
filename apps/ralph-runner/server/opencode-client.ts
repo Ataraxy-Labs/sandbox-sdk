@@ -1,12 +1,12 @@
 /**
  * OpenCode Server Client
  *
- * Wrapper around the official @opencode-ai/sdk v2 to interact with opencode server.
+ * Wrapper around the official @ataraxy-labs/sdk v2 to interact with opencode server.
  * Uses the client-only mode to connect to an existing server instance.
  */
 
-import { createOpencodeClient } from "@opencode-ai/sdk/v2/client"
-import type { Event, Session, Message, Part } from "@opencode-ai/sdk/v2/client"
+import { createOpencodeClient } from "@ataraxy-labs/sdk/v2/client"
+import type { Event, Session, Message, Part } from "@ataraxy-labs/sdk/v2/client"
 
 export type { Event, Session, Message, Part }
 

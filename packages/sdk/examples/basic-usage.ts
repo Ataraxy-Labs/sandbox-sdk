@@ -1,13 +1,13 @@
 /**
- * Basic usage example for @opencode-ai/sandbox-sdk
+ * Basic usage example for @ataraxy-labs/sandbox-sdk
  *
  * This example demonstrates the Vercel-like DX API for creating
  * and managing sandboxes across different providers.
  */
 
 // When using the published package:
-// import { Sandbox, Command, CommandResult } from "@opencode-ai/sandbox-sdk"
-// import type { SandboxDriverService, CreateOptions, SandboxInfo } from "@opencode-ai/sandbox-sdk"
+// import { Sandbox, Command, CommandResult } from "@ataraxy-labs/sandbox-sdk"
+// import type { SandboxDriverService, CreateOptions, SandboxInfo } from "@ataraxy-labs/sandbox-sdk"
 
 // For local development:
 import { Sandbox } from "../src/api/sandbox"
@@ -16,8 +16,8 @@ import type { CreateOptions, SandboxInfo } from "../src/types"
 
 // Example: Create a mock driver for demonstration
 // In practice, you'd use a real provider like:
-// import { ModalDriverLive } from "@opencode-ai/sandbox-modal"
-// import { E2BDriverLive } from "@opencode-ai/sandbox-e2b"
+// import { ModalDriverLive } from "@ataraxy-labs/sandbox-modal"
+// import { E2BDriverLive } from "@ataraxy-labs/sandbox-e2b"
 
 async function main() {
   // Note: This example uses a placeholder driver
