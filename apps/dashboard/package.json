@@ -1,0 +1,36 @@
+{
+  "name": "@ataraxy-labs/sandbox-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bunx vite",
+    "build": "bunx vite build",
+    "preview": "bunx vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@clerk/clerk-js": "^5.35.0",
+    "@kobalte/core": "^0.13.11",
+    "@solidjs/router": "0.15.4",
+    "@tanstack/query-core": "^5.28.0",
+    "@tanstack/solid-query": "^5.28.0",
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "convex": "latest",
+    "monaco-editor": "^0.52.0",
+    "solid-js": "1.9.10",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss": "4.1.11",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.11",
+    "@types/node": "22.13.9",
+    "typescript": "5.8.2",
+    "vite": "7.1.4",
+    "vite-plugin-solid": "2.11.10"
+  }
+}

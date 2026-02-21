@@ -15,7 +15,8 @@
     "packages/*",
     "apps/*",
     "apps/ralph-runner/server",
-    "apps/playground/server"
+    "apps/playground/server",
+    "apps/dashboard/server"
   ],
   "devDependencies": {
     "typescript": "5.8.2",
